@@ -45,6 +45,7 @@ create table campaign(
 	category_id varchar,
 	subcategory_id varchar,
 	primary key(cf_id),
+	foreign key(contact_id) references contacts(contact_id),
 	foreign key(category_id) references category(category_id),
 	foreign key(subcategory_id) references subcategory(subcategory_id)
 );
